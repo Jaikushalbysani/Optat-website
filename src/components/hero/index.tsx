@@ -39,7 +39,7 @@ export default function Homepage() {
             </div>
 
             <div className="para">
-                <p>"Revolutionize your business with AI solutions. Automate, grow, and succeed — Say hello to the future of efficiency."</p>
+                <p>Revolutionize your business with AI solutions. Automate, grow, and succeed — Say hello to the future of efficiency.</p>
             </div>
 
             <div className="beams">
