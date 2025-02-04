@@ -24,7 +24,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
-export function beams({
+export function Beams({
   className,
 }: {
   className?: string;
@@ -506,4 +506,4 @@ const Icons = {
   ),
 };
 
-export default beams;
+export default Beams;

@@ -77,7 +77,7 @@ const ReviewCard = ({
   );
 };
 
-export function marq() {
+export function Marq() {
   return (
     <div className="relative flex h-[300px] w-500px flex-col items-center justify-center overflow-hidden rounded-lg ">
       <Marquee pauseOnHover className="[--duration:20s]">
@@ -96,4 +96,4 @@ export function marq() {
   );
 }
 
-export default marq;
+export default Marq;

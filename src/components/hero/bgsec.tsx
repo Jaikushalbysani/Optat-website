@@ -2,7 +2,7 @@
 
 import { RetroGrid } from "@/components/ui/retro-grid";
 
-export function bgsec() {
+export function Bgsec() {
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden ">
       <RetroGrid />
@@ -10,4 +10,4 @@ export function bgsec() {
   );
 }
 
-export default bgsec;
+export default Bgsec;

@@ -3,7 +3,7 @@ const n1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738529208/n1_fpt
 const n2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738529208/n2_g0oya5.png';
 import './index.css'
 
-export function border() {
+export function Border() {
   return (
     <>
       <ShineBorder
@@ -26,4 +26,4 @@ export function border() {
   );
 }
 
-export default border;
+export default Border;

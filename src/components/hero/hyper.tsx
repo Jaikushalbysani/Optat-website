@@ -1,7 +1,7 @@
 import { HyperText } from "@/components/ui/hyper-text";
 
-export function hyper() {
+export function Hyper() {
   return <HyperText>optat</HyperText>;
 }
 
-export default hyper;
+export default Hyper;
