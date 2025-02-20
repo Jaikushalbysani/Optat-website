@@ -6,10 +6,12 @@ import Hyper from './hyper';
 import Marq from './marq';
 import Background from './Background';
 import Border from './border'
+import Contact from './Contact';
 const oa = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738530548/oa_iruyx1.png';
 const logo = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526591/logocir_naxk2q.png';
 const f2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526946/f2_izfidg.png';
 const f1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526781/wrkf1_mdt0kr.png';
+
 
 
 export default function Homepage() {
@@ -63,7 +65,7 @@ export default function Homepage() {
 
             <div className="contact">
                 <h2>Contact us</h2>
-
+                <Contact />
                         <div className="icons">
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                                 <img src="https://res.cloudinary.com/ds18h1q0k/image/upload/v1738612113/is2_ftzlbe.png" alt="" />
