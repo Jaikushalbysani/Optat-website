@@ -29,6 +29,10 @@ export default function Homepage() {
 
             <div className="retro">
                 <Bgsec />
+
+                <div className="bgsec">
+                    
+                </div>
             </div>       
 
             <div className="heroname">
