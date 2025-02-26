@@ -27,6 +27,8 @@ const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
+  font-family:"Poppins";
+  font-weight:300;
   color: ${({ theme }) => theme.text_primary};
 `;
 
@@ -34,7 +36,9 @@ const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  font-family:"Poppins";
+  font-weight:300;
+  color: #5B5B5B;
 `;
 
 const ContactForm = styled.form`
@@ -42,19 +46,23 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: #000000;
   padding: 32px;
-  border-radius: 12px;
-  box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+  font-family:"Poppins";
+  font-weight:300;
+  border-radius: 50px;
+  box-shadow: rgba(153, 22, 230, 0.3) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
   position: relative;
+  margin-bottom:50px;
 `;
 
 const ContactTitle = styled.div`
   font-size: 28px;
   font-weight: 600;
+  font-family:"Poppins";
+  font-weight:300;
   color: ${({ theme }) => theme.text_primary};
 `;
 
@@ -64,6 +72,8 @@ const ContactInput = styled.input`
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
   outline: none;
   font-size: 18px;
+  font-family:"Poppins";
+  font-weight:300;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
@@ -75,6 +85,8 @@ const ContactInputMessage = styled.textarea`
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
   outline: none;
   font-size: 18px;
+  font-family:"Poppins";
+  font-weight:300;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
@@ -83,12 +95,14 @@ const ContactInputMessage = styled.textarea`
 const ContactButton = styled.button`
   width: 100%;
   background: ${({ disabled }) =>
-    disabled ? "#4CAF50" : "hsla(271, 100%, 50%, 1)"};
+    disabled ? "#000" : "#fff"};
   padding: 13px 16px;
   margin-top: 2px;
-  border-radius: 12px;
+  border-radius: 30px;
   border: none;
-  color: white;
+  font-family:"Poppins";
+  font-weight:300;
+  color: black;
   font-size: 18px;
   font-weight: 600;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -136,8 +150,8 @@ const Contact = () => {
   return (
     <Container id="Contact">
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Title>C O N T A C T</Title>
+        <Desc>Feel free to reach out, for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <input type="hidden" name="to_name" value="Optat" />
 

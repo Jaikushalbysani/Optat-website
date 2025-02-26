@@ -75,6 +75,13 @@
     width:1090px;
 }
 
+.mf1 {
+    display: none;
+}
+.mf2{
+    display: none;
+}
+
 .navbar{
     align-items: center;
     display: flex;
@@ -108,6 +115,10 @@
     gap:50px;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.testi {
+    margin-top: 150px;
 }
 
 
@@ -166,4 +177,14 @@
     margin-top: 150px;
     font-family: "Poppins";
     margin-bottom: 20px;
+}
+
+@media (max-width: 460px){
+    .f1{
+        display: none;
+    }
+    .f2{
+        display: none;
+    }
+    
 }

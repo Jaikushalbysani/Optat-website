@@ -6,13 +6,15 @@ import Beams from './beams';
 import Hyper from './hyper';
 import Marq from './marq';
 import Background from './Background';
-import Border from './border';
+//import Border from './border';
 import Contact from './Contact';
 
 const oa = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738530548/oa_iruyx1.png';
 const logo = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526591/logocir_naxk2q.png';
 const f2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526946/f2_izfidg.png';
 const f1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1738526781/wrkf1_mdt0kr.png';
+const mf2 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1740585671/mf1_euzhlb.png';
+const mf1 = 'https://res.cloudinary.com/ds18h1q0k/image/upload/v1740585673/mf2_ml24nk.png';
 
 export default function Homepage() {
     // Refs for different sections
@@ -64,7 +66,7 @@ export default function Homepage() {
             <div className="beams">
                 <Beams />
             </div>
-
+          
             <div className="f1">
                 <img src={f1} alt="Feature 1" />
             </div>
@@ -72,21 +74,29 @@ export default function Homepage() {
                 <img src={f2} alt="Feature 2" />
             </div>
 
+            <div className="mf1">
+                <img src={mf1} alt="Feature m1" />
+            </div>
+            <div className="mf1">
+                <img src={mf2} alt="Feature m2" />
+            </div>
+
+
             {/* Automations Section */}
             
-                <h2>Automations</h2>
-                <Border />
+
+                {/*<Border />*/}
+
             </div>
 
             {/* Branding Section */}
-            <div ref={brandingRef} className="section">
-                <h2>Branding</h2>
-                <Marq />
+
+            <div className="testi">
+            <Marq />
             </div>
 
             {/* Contact Section */}
             <div ref={contactRef} className="section contact">
-                <h2>Contact Us</h2>
                 <Contact />
                 <div className="icons">
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
@@ -106,7 +116,7 @@ export default function Homepage() {
 
             {/* Footer */}
             <div className="footer">
-                <h1>Copyright©Designed & Developed by Optat.work</h1>
+                <h1>Copyright © Designed & Developed by Optat.work</h1>
             </div>
         </div>
     );
