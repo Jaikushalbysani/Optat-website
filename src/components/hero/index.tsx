@@ -33,6 +33,8 @@ export default function Homepage() {
         <div className="hero">
             <Background />
 
+            
+
             {/* Navbar with smooth scrolling */}
             <div className="navcon">
                 <div className="navbar">
@@ -44,6 +46,10 @@ export default function Homepage() {
                 </div>
             </div>
 
+            <div className="title">
+                    <h1>OPTAT</h1>
+                </div> 
+
             {/* Sections */}
             <div className="retro">
                 <Bgsec />
@@ -51,7 +57,9 @@ export default function Homepage() {
                 <div className="bgsec">
                     
                 </div>
-            </div>       
+            </div>    
+
+  
 
             <div className="heroname">
                 <Hyper />
@@ -63,9 +71,13 @@ export default function Homepage() {
                 <p>Revolutionize your business with AI solutions. Automate, grow, and succeed — Say hello to the future of efficiency.</p>
             </div>
             <div ref={automationsRef} className="section">
+            
+            <div className="beamss">
             <div className="beams">
                 <Beams />
             </div>
+            </div>
+
           
             <div className="f1">
                 <img src={f1} alt="Feature 1" />

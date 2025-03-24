@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 52px;
+  font-size: 35px;
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
@@ -33,7 +33,7 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 18px;
+  font-size: 13px;
   text-align: center;
   font-weight: 600;
   font-family:"Poppins";

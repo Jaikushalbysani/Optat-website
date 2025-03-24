@@ -91,6 +91,7 @@
     padding: 10px;
     border-radius: 50px;
     margin-top: 20px;
+    position: fixed;
 }
 .navbar img{
     width:50px;
@@ -101,6 +102,12 @@
     color:#777777;
     cursor: pointer;
     transition: 0.5s;
+}
+.navcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
 }
 .navbar h2:hover{
     color:#000000;
@@ -169,6 +176,14 @@
 .test{
     margin-top: 200px;
 }
+.beams{
+    width:600px
+}
+.beamss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .footer {
     display: flex;
@@ -178,13 +193,67 @@
     font-family: "Poppins";
     margin-bottom: 20px;
 }
-
+.title{
+    display: none;
+}
 @media (max-width: 460px){
     .f1{
         display: none;
     }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 160px;
+    }
+    .title h1{
+        color:#fff;
+        font-family: "Poppins";
+        font-size: 50px;
+        letter-spacing: 15px;
+        font-weight: 600;
+    }
+    .para p{
+        font-size: 20px;
+        width:300px;
+    }
+    .mf1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mf1 img{
+        width:330px;
+    }
+    .mf2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mf2 img{
+        width:330px;
+    }
     .f2{
         display: none;
     }
-    
+    .hyper-root{
+        display: none;
+    }
+    .navbar h2{
+        display: none;
+    }
+    .heroname img{
+        margin-top: 150px;
+        width: 300px;
+    }
+    .heroname button{
+        margin-top: -40px;
+    }
+    .beams{
+        width:300px;
+    }
+    .footer h1{
+        font-size: 12px;
+    }
 }
+

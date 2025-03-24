@@ -3,39 +3,33 @@ import { Marquee } from "@/components/ui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Siva bhadra",
+    body: "These guys are doing just great, I love their work!!",
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Jill",
-    username: "@jill",
+    name: "Rithwika",
     body: "I don't know what to say. I'm speechless. This is amazing.",
     img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Sujith Krishna.Y",
+    body: "The branding and the website they made were juzt amazing",
     img: "https://avatar.vercel.sh/john",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Hemanth",
+    body: "WT work they are doing, dammm they are litt",
     img: "https://avatar.vercel.sh/jane",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Santhosh.K",
+    body: "Iam their biggest fan!, optat juzt rocks",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Motowize",
+    body: "DO not hesitate to give them a project, they will surely make it great! trust me!",
     img: "https://avatar.vercel.sh/james",
   },
 ];
