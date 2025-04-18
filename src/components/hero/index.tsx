@@ -42,6 +42,7 @@ export default function Homepage() {
                     <h2 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</h2>
                     <h2 onClick={() => scrollToSection(automationsRef)}>Automations</h2>
                     <h2 onClick={() => scrollToSection(brandingRef)}>Branding</h2>
+                    <h2 onClick={() => window.location.href = '/stories'}>Stories</h2>
                     <h2 onClick={() => scrollToSection(contactRef)}>Contact</h2>
                 </div>
             </div>
