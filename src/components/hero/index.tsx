@@ -65,7 +65,9 @@ export default function Homepage() {
             <div className="heroname">
                 <Hyper />
                 <img src={oa} alt="Hero" />
-                <button>Unlock Possibilities!</button>
+                <button onClick={() => window.open('https://calendly.com/optat-work?hide_landing_page_details=1&hide_gdpr_banner=1', '_blank')}>
+                    Unlock Possibilities!
+                </button>
             </div>
 
             <div className="para">

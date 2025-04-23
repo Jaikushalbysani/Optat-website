@@ -23,51 +23,84 @@ interface Comment {
 
 export function StoryList() {
   const [stories, setStories] = useState<Story[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [newStory, setNewStory] = useState({ title: '', content: '', author: '' });
   const [showForm, setShowForm] = useState(false);
   const [newComment, setNewComment] = useState('');
   const [expandedStory, setExpandedStory] = useState<number | null>(null);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch('/api/stories')
-      .then((res) => res.json())
-      .then(setStories);
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch stories');
+        return res.json();
+      })
+      .then((data) => {
+        setStories(data);
+        setError(null);
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   const handleAddStory = async () => {
-    const res = await fetch('/api/stories', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newStory),
-    });
-    const data = await res.json();
-    setStories([data, ...stories]);
-    setNewStory({ title: '', content: '', author: '' });
-    setShowForm(false);
+    try {
+      const res = await fetch('/api/stories', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newStory),
+      });
+      if (!res.ok) throw new Error('Failed to add story');
+      const data = await res.json();
+      setStories([data, ...stories]);
+      setNewStory({ title: '', content: '', author: '' });
+      setShowForm(false);
+    } catch (error) {
+      console.error('Error adding story:', error);
+    }
   };
 
   const handleLike = async (id: number) => {
-    await fetch(`/api/stories/${id}/like`, { method: 'POST' });
-    setStories((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, likes: s.likes + 1 } : s))
-    );
+    try {
+      const res = await fetch(`/api/stories/${id}/like`, { method: 'POST' });
+      if (!res.ok) throw new Error('Failed to like story');
+      setStories((prev) =>
+        prev.map((s) => (s.id === id ? { ...s, likes: s.likes + 1 } : s))
+      );
+    } catch (error) {
+      console.error('Error liking story:', error);
+    }
   };
 
   const handleComment = async (storyId: number) => {
-    await fetch(`/api/stories/${storyId}/comment`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content: newComment, author: 'Anonymous' }),
-    });
+    try {
+      const commentRes = await fetch(`/api/stories/${storyId}/comment`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: newComment, author: 'Anonymous' }),
+      });
+      if (!commentRes.ok) throw new Error('Failed to add comment');
 
-    const res = await fetch(`/api/stories/${storyId}/comment`);
-    const updatedComments = await res.json();
+      const getRes = await fetch(`/api/stories/${storyId}/comment`);
+      if (!getRes.ok) throw new Error('Failed to fetch comments');
+      const updatedComments = await getRes.json();
 
-    setStories((prev) =>
-      prev.map((s) => (s.id === storyId ? { ...s, comments: updatedComments } : s))
-    );
-
-    setNewComment('');
+      setStories((prev) =>
+        prev.map((s) => (s.id === storyId ? { ...s, comments: updatedComments } : s))
+      );
+      setNewComment('');
+    } catch (error) {
+      console.error('Error handling comment:', error);
+    }
   };
 
   const toggleComments = async (story: Story) => {
